@@ -31,12 +31,14 @@ public class CalendarStuffTester {
    * @return void
    */
    public static void main ( String [] args ) {
-      test_isLeapYear();      // 11 tests
-      test_daysInMonth();     // 13 tests
-      test_isValidDate();     //  8 tests
-      test_dateEquals();      //  5 tests
-      test_compareDate();     //  7 tests
-      test_daysBetween();     // 12 tests
+      test_isLeapYear();         // 11 tests
+      test_daysInMonth();        // 13 tests
+      test_isValidDate();        //  8 tests
+      test_dateEquals();         //  5 tests
+      test_compareDate();        //  7 tests
+      test_daysBetween();        // 12 tests
+      test_toDayOfWeekString();  //  9 tests
+      test_toMonthString();      // 14 tests
    }
 
   /**
@@ -311,6 +313,116 @@ public class CalendarStuffTester {
      System.out.print( "   Counting 0001 day  between 03-16-2005 and 03-15-2005 : " );
      try { System.out.println(    1 == CalendarStuff.daysBetween(  3, 16, 2005,  3, 15, 2005 ) ? "one day   " : "bad count" ); }
      catch( Exception e ) { System.out.println( false ); }
+
+   }
+
+  /**
+   * method to test the "toDayOfWeekString()" method in the CalendarStuff class
+   * @return void
+   */
+   static void test_toDayOfWeekString() {
+
+      System.out.println ( "\nNINE TESTS FOR toDayOfWeekString():" );
+
+      System.out.print( "   Checking for 'Sunday'    : " );
+      try { System.out.println(    "Sunday" == CalendarStuff.toDayOfWeekString( 1 ) ? "Got it!" : "problem" ); }
+      catch( Exception e ) { System.out.println( false ); }
+
+      System.out.print( "   Checking for 'Monday'    : " );
+      try { System.out.println(    "Monday" == CalendarStuff.toDayOfWeekString( 2 ) ? "Got it!" : "problem" ); }
+      catch( Exception e ) { System.out.println( false ); }
+
+      System.out.print( "   Checking for 'Tuesday'   : " );
+      try { System.out.println(   "Tuesday" == CalendarStuff.toDayOfWeekString( 3 ) ? "Got it!" : "problem" ); }
+      catch( Exception e ) { System.out.println( false ); }
+
+      System.out.print( "   Checking for 'Wednesday' : " );
+      try { System.out.println( "Wednesday" == CalendarStuff.toDayOfWeekString( 4 ) ? "Got it!" : "problem" ); }
+      catch( Exception e ) { System.out.println( false ); }
+
+      System.out.print( "   Checking for 'Thursday'  : " );
+      try { System.out.println(  "Thursday" == CalendarStuff.toDayOfWeekString( 5 ) ? "Got it!" : "problem" ); }
+      catch( Exception e ) { System.out.println( false ); }
+
+      System.out.print( "   Checking for 'Friday'    : " );
+      try { System.out.println(    "Friday" == CalendarStuff.toDayOfWeekString( 6 ) ? "Got it!" : "problem" ); }
+      catch( Exception e ) { System.out.println( false ); }
+
+      System.out.print( "   Checking for 'Saturday'  : " );
+      try { System.out.println(  "Saturday" == CalendarStuff.toDayOfWeekString( 7 ) ? "Got it!" : "problem" ); }
+      catch( Exception e ) { System.out.println( false ); }
+
+      System.out.print( "   Checking for 'Zeroday'   : " );
+      try { System.out.println(    "Friday" == CalendarStuff.toDayOfWeekString( 0 ) ? "Got it!" : "problem" ); }
+      catch( Exception e ) { System.out.println( false ); }
+
+      System.out.print( "   Checking for 'Octoday'   : " );
+      try { System.out.println(  "Saturday" == CalendarStuff.toDayOfWeekString( 8 ) ? "Got it!" : "problem" ); }
+      catch( Exception e ) { System.out.println( false ); }
+   }
+  /**
+   * method to test the "daysBetween()" method in the CalendarStuff class
+   * @return void
+   */
+   static void test_toMonthString() {
+
+      System.out.println ( "\nFOURTEEN TESTS FOR toMonthString():" );
+
+      System.out.print( "   Checking for 'January'    : " );
+      try { System.out.println( "January" == CalendarStuff.toMonthString( 1 ) ? "Got it!" : "problem" ); }
+      catch( Exception e ) { System.out.println( false ); }
+
+      System.out.print( "   Checking for 'February'   : " );
+      try { System.out.println( "February" == CalendarStuff.toMonthString( 2 ) ? "Got it!" : "problem" ); }
+      catch( Exception e ) { System.out.println( false ); }
+
+      System.out.print( "   Checking for 'March'      : " );
+      try { System.out.println( "March" == CalendarStuff.toMonthString( 3 ) ? "Got it!" : "problem" ); }
+      catch( Exception e ) { System.out.println( false ); }
+
+      System.out.print( "   Checking for 'April'      : " );
+      try { System.out.println( "April" == CalendarStuff.toMonthString( 4 ) ? "Got it!" : "problem" ); }
+      catch( Exception e ) { System.out.println( false ); }
+
+      System.out.print( "   Checking for 'May'        : " );
+      try { System.out.println( "May" == CalendarStuff.toMonthString( 5 ) ? "Got it!" : "problem" ); }
+      catch( Exception e ) { System.out.println( false ); }
+
+      System.out.print( "   Checking for 'June'       : " );
+      try { System.out.println( "June" == CalendarStuff.toMonthString( 6 ) ? "Got it!" : "problem" ); }
+      catch( Exception e ) { System.out.println( false ); }
+
+      System.out.print( "   Checking for 'July'       : " );
+      try { System.out.println( "July" == CalendarStuff.toMonthString( 7 ) ? "Got it!" : "problem" ); }
+      catch( Exception e ) { System.out.println( false ); }
+
+      System.out.print( "   Checking for 'August'     : " );
+      try { System.out.println( "August" == CalendarStuff.toMonthString( 8 ) ? "Got it!" : "problem" ); }
+      catch( Exception e ) { System.out.println( false ); }
+
+      System.out.print( "   Checking for 'September'  : " );
+      try { System.out.println( "September" == CalendarStuff.toMonthString( 9 ) ? "Got it!" : "problem" ); }
+      catch( Exception e ) { System.out.println( false ); }
+
+      System.out.print( "   Checking for 'October'    : " );
+      try { System.out.println( "October" == CalendarStuff.toMonthString( 10 ) ? "Got it!" : "problem" ); }
+      catch( Exception e ) { System.out.println( false ); }
+
+      System.out.print( "   Checking for 'November'   : " );
+      try { System.out.println( "November" == CalendarStuff.toMonthString( 11 ) ? "Got it!" : "problem" ); }
+      catch( Exception e ) { System.out.println( false ); }
+
+      System.out.print( "   Checking for 'December'   : " );
+      try { System.out.println( "December" == CalendarStuff.toMonthString( 12 ) ? "Got it!" : "problem" ); }
+      catch( Exception e ) { System.out.println( false ); }
+
+      System.out.print( "   Checking for 'Zeroary'    : " );
+      try { System.out.println( "Zeroary" == CalendarStuff.toMonthString( 0 ) ? "Got it!" : "problem" ); }
+      catch( Exception e ) { System.out.println( false ); }
+
+      System.out.print( "   Checking for 'Thirtember' : " );
+      try { System.out.println( "Thirtember" == CalendarStuff.toMonthString( 12 ) ? "Got it!" : "problem" ); }
+      catch( Exception e ) { System.out.println( false ); }
 
    }
 
