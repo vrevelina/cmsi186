@@ -20,7 +20,7 @@
  *  Notes         :  Stolen from Dr. Dorin pretty much verbatim, then modified to show some interesting
  *                   things about Java, and to add this header block and some JavaDoc comments.
  *  Warnings      :  None
- *  Exceptions    :  None
+ *  Exceptions    :  IllegalArgumentException when the number of sides or pips is out of range
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  *  Revision Histor
  *  ---------------

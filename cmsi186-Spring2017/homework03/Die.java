@@ -6,7 +6,16 @@
  *  Description   :  This class provides the data fields and methods to describe a single game die.  A
  *                   die can have "N" sides.  Sides are randomly assigned sequential pip values, from 1
  *                   to N, with no repeating numbers.  A "normal" die would thus has six sides, with the
- *                   pip values [spots] ranging in value from one to six.
+ *                   pip values [spots] ranging in value from one to six.  Includes the following:
+ *                   public Die( int nSides );                  // Constructor for a single die with "N" sides
+ *                   public int roll();                         // Roll the die and return the result
+ *                   public int getSides()                      // get the number of sides on this die     
+ *                   public int getValue()                      // get the value of this die
+ *                   public void setSides()                     // change the configuration and return the new number of sides
+ *                   public String toString()                   // Instance method that returns a String representation
+ *                   public static String toString()            // Class-wide method that returns a String representation
+ *                   public static void main( String args[] );  // main for testing porpoises
+ *
  *  Notes         :  Restrictions: no such thing as a "two-sided die" which would be a coin, actually.
  *                   Also, no such thing as a "three-sided die" which is a physical impossibility without
  *                   having it be a hollow triangular prism shape, presenting an argument as to whether
@@ -14,8 +23,9 @@
  *                   minimum number of faces.  However, be aware that a four-sided die dosn't have a top
  *                   face to provide a value, since it's a tetrahedron [pyramid] so you'll have to figure
  *                   out a way to get the value, since it won't end up on its point.
+ *
  *  Warnings      :  None
- *  Exceptions    :  None
+ *  Exceptions    :  IllegalArgumentException when the number of sides or pips is out of range
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  *  Revision Histor
  *  ---------------
