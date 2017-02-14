@@ -40,7 +40,7 @@ public class Die {
    */
    private int sides;
    private int pips;
-   private int MINIMUM_SIDES = 4;
+   private final int MINIMUM_SIDES = 4;
 
    // public constructor:
   /**
