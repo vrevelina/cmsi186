@@ -97,7 +97,7 @@ public class Die {
   /**
    * @return Class-wide method that returns a String representation of THIS die instance
    */
-   public static String toString( Card c ) {
+   public static String toString( Die d ) {
       return "";
    }
 
