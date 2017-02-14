@@ -75,7 +75,7 @@ public class DiceSet {
    * @param  dieIndex int of which die to roll
    * @trhows IllegalArgumentException if the index is out of range
    */
-   public void getIndividual( int dieIndex ) {
+   public int getIndividual( int dieIndex ) {
       return -999;
    }
 
@@ -100,7 +100,7 @@ public class DiceSet {
   /**
    * @return Class-wide version of the preceding instance method
    */
-   public static String toString( DiceSet ds );
+   public static String toString( DiceSet ds ) {
       return "";
    }
 
