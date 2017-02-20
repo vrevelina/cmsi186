@@ -9,7 +9,6 @@
  *                   pip values [spots] ranging in value from one to six.  Includes the following:
  *                   public Die( int nSides );                  // Constructor for a single die with "N" sides
  *                   public int roll();                         // Roll the die and return the result
- *                   public int getSides()                      // get the number of sides on this die
  *                   public int getValue()                      // get the value of this die
  *                   public void setSides()                     // change the configuration and return the new number of sides
  *                   public String toString()                   // Instance method that returns a String representation
@@ -54,17 +53,10 @@ public class DieEmpty {
    }
 
   /**
-   * Roll the die and return the result
-   * @return  integer value of the result of the roll, whatever would be on top, randomly selected
+   * Roll THIS die and return the result
+   * @return  integer value of the result of the roll, randomly selected
    */
    public int roll() {
-      return 0;
-   }
-
-  /**
-   * @return the side count of THIS die instance
-   */
-   public int getSides() {
       return 0;
    }
 
