@@ -11,7 +11,6 @@
  *                   public void roll();                              // Randomly rolls all of the dice in this set
  *                   public void rollIndividual( int i );             // Randomly rolls only the ith die in this set
  *                   public int getIndividual( int i );               // Gets the value of the ith die in this set
- *                   public void setIndividual( int i, int jValue );  // Sets the ith die in this set to the value of jValue
  *                   public String toString();                        // Returns a stringy representation of this set of dice
  *                   public static String toString( DiceSet ds );     // Classwide version of the preceding instance method
  *                   public boolean isIdentical( DiceSet ds );        // Returns true iff this set is identical to the set ds
@@ -58,14 +57,16 @@ public class DiceSetEmpty {
 
   /**
    * Randomly rolls all of the dice in this set
+   *  NOTE: you will need to use one of the "toString()" methods to obtain
+   *  the values of the dice in the set
    */
-   public int roll() {
-      return 0;
+   public void roll() {
    }
 
   /**
-   * Randomly rolls a single die of the dice in this set
+   * Randomly rolls a single die of the dice in this set indexed by 'dieIndex'
    * @param  dieIndex int of which die to roll
+   * @return the integer value of the newly rolled die
    * @trhows IllegalArgumentException if the index is out of range
    */
    public int rollIndividual( int dieIndex ) {
@@ -79,16 +80,6 @@ public class DiceSetEmpty {
    */
    public int getIndividual( int dieIndex ) {
       return -999;
-   }
-
-  /**
-   * Gets the value of the die in this set indexed by 'dieIndex'
-   * @param  dieIndex int of which die to set the value of
-   * @param  dieValue int of the value to set for that die
-   * @trhows IllegalArgumentException if the index is out of range
-   */
-   public void setIndividual( int dieIndex, int dieValue ) {
-
    }
 
   /**
