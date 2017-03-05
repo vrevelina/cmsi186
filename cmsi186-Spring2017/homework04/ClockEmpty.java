@@ -24,6 +24,8 @@ public class ClockEmpty {
    private static final double DEFAULT_TIME_SLICE_IN_SECONDS = 60.0;
    private static final double INVALID_ARGUMENT_VALUE = -1.0;
    private static final double MAXIMUM_DEGREE_VALUE = 360.0;
+   private static final double HOUR_HAND_DEGREES_PER_SECOND = 0.00834;
+   private static final double MINUTE_HAND_DEGREES_PER_SECOND = 0.1;
 
   /**
    *  Constructor goes here
@@ -71,7 +73,7 @@ public class ClockEmpty {
    *  Method to calculate and return the current position of the hour hand
    *  @return double-precision value of the hour hand location
    */
-   public double getHourHand() {
+   public double getHourHandAngle() {
       return 0.0;
    }
 
@@ -79,7 +81,7 @@ public class ClockEmpty {
    *  Method to calculate and return the current position of the minute hand
    *  @return double-precision value of the minute hand location
    */
-   public double getMinuteHand() {
+   public double getMinuteHandAngle() {
       return 0.0;
    }
 
@@ -88,6 +90,15 @@ public class ClockEmpty {
    *  @return double-precision value of the angle between the two hands
    */
    public double getHandAngle() {
+      return 0.0;
+   }
+
+  /**
+   *  Method to fetch the total number of seconds
+   *   we can use this to tell when 12 hours have elapsed
+   *  @return double-precision value the total seconds private variable
+   */
+   public double getTotalSeconds() {
       return 0.0;
    }
 
@@ -115,7 +126,7 @@ public class ClockEmpty {
       System.out.println( "    New clock created: " + clock.toString() );
       System.out.println( "    Testing validateAngleArg()....");
       System.out.print( "      sending '  0 degrees', expecting double value   0.0" );
-      try { System.out.println( (0.0 == clock.validateAngleArg( "0.0" )) ? " - got   0.0" : " - no joy" ); }
+      try { System.out.println( (0.0 == clock.validateAngleArg( "0.0" )) ? " - got 0.0" : " - no joy" ); }
       catch( Exception e ) { System.out.println ( " - Exception thrown: " + e.toString() ); }
    }
 }
