@@ -1,3 +1,26 @@
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * File name  :  Tuple.java
+ * Purpose    :  Program to represent a tuple of integers, indexed from zero
+ * @author    :  Professor Don Murphy
+ * @author    :  B.J. Johnson totally ripped off from the original
+ * Date       :  2017-04-19
+ * Description:  This program provides a "Tuple" class which is basically a set of "n" integers that are
+ *                handled as a unit.  This class is intended to be used as part of homework 7, the coin
+ *                changemaker, which is a "Dynamic Programming" algorithm.
+ * Notes      :  None
+ * Warnings   :  None
+ *
+ *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * Revision History
+ * ================
+ *   Ver      Date     Modified by:  Reason for change or modification
+ *  -----  ----------  ------------  ---------------------------------------------------------------------
+ *  1.0.0  2017-04-19  B.J. Johnson  Initial release; stolen blatently from Professor Don Murphy with his
+ *                                    express permission and blessing; just added this comment block
+ *
+ *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+import java.util.Arrays;
+
 /**
  * This class represents a tuple of integers, indexed from zero.
  */

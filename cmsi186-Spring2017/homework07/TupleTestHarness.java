@@ -1,8 +1,30 @@
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * File name  :  TupleTestHarness.java
+ * Purpose    :  Test harness for the Tuple class
+ * @author    :  Professor Don Murphy
+ * @author    :  B.J. Johnson totally ripped off from the original
+ * Date       :  2017-04-19
+ * Description:  Duh.... see the Purpose above
+ * Notes      :  None
+ * Warnings   :  None
+ *
+ *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * Revision History
+ * ================
+ *   Ver      Date     Modified by:  Reason for change or modification
+ *  -----  ----------  ------------  ---------------------------------------------------------------------
+ *  1.0.0  2017-04-19  B.J. Johnson  Initial writing and release; stolen blatently from Professor Murphy
+ *                                    with his permission; added this comment block and some javadocs
+ *
+ *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 public class TupleTestHarness {
 
     private static int attempts = 0;
     private static int successes = 0;
 
+   /**
+    *  the main method which calls all the test methods
+    */
     public static void main(String[] args) {
         attempts = 0;
         successes = 0;
@@ -18,6 +40,12 @@ public class TupleTestHarness {
         System.out.println(successes + "/" + attempts + " tests passed.");
     }
 
+   /**
+    *  method to display success or failure as a result of a test
+    *  @param  value  boolean success/failure
+    *  Note that this method keeps track of the count of tests run
+    *    as well as the number of successes
+    */
     private static void displaySuccessIfTrue(boolean value) {
         attempts++;
         successes += value ? 1 : 0;
@@ -25,10 +53,17 @@ public class TupleTestHarness {
         System.out.println(value ? "success" : "failure");
     }
 
+   /**
+    *  method to display a failure, probably for things that are
+    *   supposed to fail on purpose [that's a guess]
+    */
     private static void displayFailure() {
         displaySuccessIfTrue(false);
     }
 
+   /**
+    *  method to test the "toString()" method a buncha times
+    */
     public static void test_toString() {
         try {
             displaySuccessIfTrue("Impossible tally".equals(Tuple.IMPOSSIBLE.toString()));
@@ -100,6 +135,12 @@ public class TupleTestHarness {
         }
     }
 
+   /**
+    *  method to test the "setElement()" method a couple of times
+    *   makes a few Tuples and checks that you got what you paid for
+    *   note that the "toString()" method puts angle brackets around
+    *   the tuple for easy reading
+    */
     public static void test_setElement() {
         Tuple t0 = new Tuple(new int[] { 3, 1, 2 });
         try {
@@ -127,6 +168,10 @@ public class TupleTestHarness {
         }
     }
 
+   /**
+    *  method to test adding two tuples together.  Only one test, but theoreticall
+    *   should test a lot of different sizes, not just "three-Tuples"
+    */
     public static void test_add() {
         try {
             Tuple t0 = new Tuple(new int[] { -1, 0, 2 });
@@ -141,6 +186,9 @@ public class TupleTestHarness {
         }
     }
 
+   /**
+    *  method to test the "equals()" method
+    */
     public static void test_equals() {
         Tuple t0 = new Tuple(new int[] { -1, 0, 2 });
         Tuple t1 = new Tuple(new int[] { -1, 0, 2 });
@@ -174,6 +222,9 @@ public class TupleTestHarness {
         }
     }
 
+   /**
+    *  method to test the "getElement()" method
+    */
     public static void test_getElement() {
         Tuple t0 = new Tuple(new int[] { -1, 0, 2 });
         
@@ -199,6 +250,9 @@ public class TupleTestHarness {
         }
     }
 
+   /**
+    *  method to test the "length()" method
+    */
     public static void test_length() {
         try {
             Tuple t0 = new Tuple(0);
@@ -217,6 +271,9 @@ public class TupleTestHarness {
         }
     }
 
+   /**
+    *  method to test the "total()" method
+    */
     public static void test_total() {
         try {
             Tuple t0 = new Tuple(0);
