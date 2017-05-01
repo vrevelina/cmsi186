@@ -22,6 +22,7 @@
  *                                    "hashCode" method
  *
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 public class TupleTestHarness {
 
    private static int attempts  = 0;
