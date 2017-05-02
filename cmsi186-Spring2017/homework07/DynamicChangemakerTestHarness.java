@@ -1,5 +1,5 @@
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * File name  :  ChangeMakerTestHarness.java
+ * File name  :  DynamicChangemakerTestHarness.java
  * Purpose    :  Test harness for verification of the ChangeMaker class
  * @author    :  Professor Don Murphy
  * @author    :  B.J. Johnson totally ripped off from the original
@@ -33,7 +33,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Arrays;
 
-public class ChangeMakerTestHarness {
+public class DynamicChangemakerTestHarness {
 
    public static final int MAX_DENOM_VALUE = 73;
 
@@ -103,7 +103,7 @@ public class ChangeMakerTestHarness {
       System.out.println( "  ==================================================================" );
       System.out.println( "\n    Test" + makeTwoDigits() + ": testing optimal solution for 99 cents: " );
 
-      result = ChangeMaker.makeChangeWithDynamicProgramming( usaDenominations, 99 );
+      result = DynamicChangeMaker.makeChangeWithDynamicProgramming( usaDenominations, 99 );
 
       try {
         System.out.print( "      expecting Tuple: <3,2,0,4>: " );
@@ -152,7 +152,7 @@ public class ChangeMakerTestHarness {
       usaDenominations  = new int[] { 100, 50, 25, 10, 5, 1 };
       System.out.println( "\n    Test" + makeTwoDigits() + ": testing optimal solution for 25789 cents: " );
       System.out.println( "        note: expanded denominations including 50 cent and Susan B. Anthony dollar" );
-      result = ChangeMaker.makeChangeWithDynamicProgramming( usaDenominations, 25789 );
+      result = DynamicChangeMaker.makeChangeWithDynamicProgramming( usaDenominations, 25789 );
       try {
          System.out.print( "      expecting Tuple: <257,1,1,1,0,4>: " );
          displaySuccessIfTrue( "<257,1,1,1,0,4>".equals( result.toString() ) );
@@ -165,7 +165,7 @@ public class ChangeMakerTestHarness {
       System.out.println( "  =================================================================" );
       int[] newDenominations  = new int[] { 2, 3 };
       System.out.println( "\n    Test" + makeTwoDigits() + ": testing optimal solution for 6 cents using " + Arrays.toString( newDenominations ) + ": " );
-      result = ChangeMaker.makeChangeWithDynamicProgramming( newDenominations, 5 );
+      result = DynamicChangeMaker.makeChangeWithDynamicProgramming( newDenominations, 5 );
       try {
          System.out.print( "      expecting Tuple: <1,1>: " );
          displaySuccessIfTrue( "<1,1>".equals( result.toString() ) );
@@ -176,7 +176,7 @@ public class ChangeMakerTestHarness {
 
       newDenominations  = new int[] { 2, 3, 7, 5, 51, 29, 11 };
       System.out.println( "\n    Test" + makeTwoDigits() + ": testing optimal solution for 13579 cents using " + Arrays.toString( newDenominations ) + ": " );
-      result = ChangeMaker.makeChangeWithDynamicProgramming( newDenominations, 13579 );
+      result = DynamicChangeMaker.makeChangeWithDynamicProgramming( newDenominations, 13579 );
       try {
          System.out.print( "      expecting Tuple: <1,0,0,0,266,0,1>: " );
          displaySuccessIfTrue( "<1,0,0,0,266,0,1>".equals( result.toString() ) );
@@ -187,7 +187,7 @@ public class ChangeMakerTestHarness {
 
       newDenominations  = new int[] { 17, 23, 121, 47, 3 };
       System.out.println( "\n    Test" + makeTwoDigits() + ": testing optimal solution for 13579 cents using " + Arrays.toString( newDenominations ) + ": " );
-      result = ChangeMaker.makeChangeWithDynamicProgramming( newDenominations, 13579 );
+      result = DynamicChangeMaker.makeChangeWithDynamicProgramming( newDenominations, 13579 );
       try {
          System.out.print( "      expecting Tuple: <3,0,111,2,1>: " );
          displaySuccessIfTrue( "<3,0,111,2,1>".equals( result.toString() ) );
@@ -207,7 +207,7 @@ public class ChangeMakerTestHarness {
       System.out.println( "  ===============================================================" );
 
       System.out.println( "\n    Test" + makeTwoDigits() + ": testing optimal solution for 99 cents: " );
-      result = ChangeMaker.makeChangeWithDynamicProgramming( euroDenominations, 99 );
+      result = DynamicChangeMaker.makeChangeWithDynamicProgramming( euroDenominations, 99 );
       try {
         System.out.print( "      expecting Tuple: <0,2,1,0,2,1>: " );
         displaySuccessIfTrue( "<0,2,1,0,2,1>".equals( result.toString() ) ) ;
@@ -217,7 +217,7 @@ public class ChangeMakerTestHarness {
       }
 
       System.out.println( "\n    Test" + makeTwoDigits() + ": testing optimal solution for 88 cents: " );
-      result = ChangeMaker.makeChangeWithDynamicProgramming( euroDenominations, 88 );
+      result = DynamicChangeMaker.makeChangeWithDynamicProgramming( euroDenominations, 88 );
       try {
         System.out.print( "      expecting Tuple: <1,1,1,1,1,1>: " );
         displaySuccessIfTrue( "<1,1,1,1,1,1>".equals( result.toString() ) ) ;
@@ -227,7 +227,7 @@ public class ChangeMakerTestHarness {
       }
 
       System.out.println( "\n    Test" + makeTwoDigits() + ": testing optimal solution for 176 cents: " );
-      result = ChangeMaker.makeChangeWithDynamicProgramming( euroDenominations, 176 );
+      result = DynamicChangeMaker.makeChangeWithDynamicProgramming( euroDenominations, 176 );
       try {
         System.out.print( "      expecting Tuple: <1,0,1,0,1,3>: " );
         displaySuccessIfTrue( "<1,0,1,0,1,3>".equals( result.toString() ) ) ;
@@ -247,7 +247,7 @@ public class ChangeMakerTestHarness {
       System.out.println( "  ================================================================" );
 
       System.out.println( "\n    Test" + makeTwoDigits() + ": testing optimal solution for 99 cents: " );
-      result = ChangeMaker.makeChangeWithDynamicProgramming( francDenominations, 99 );
+      result = DynamicChangeMaker.makeChangeWithDynamicProgramming( francDenominations, 99 );
       try {
         System.out.print( "      expecting Tuple: Impossible tuple: " );
         displaySuccessIfTrue( "Impossible tuple".equals( result.toString() ) ) ;
@@ -257,7 +257,7 @@ public class ChangeMakerTestHarness {
       }
 
       System.out.println( "\n    Test" + makeTwoDigits() + ": testing optimal solution for 85 cents: " );
-      result = ChangeMaker.makeChangeWithDynamicProgramming( francDenominations, 85 );
+      result = DynamicChangeMaker.makeChangeWithDynamicProgramming( francDenominations, 85 );
       try {
         System.out.print( "      expecting Tuple: <1,1,1,1>: " );
         displaySuccessIfTrue( "<1,1,1,1>".equals( result.toString() ) ) ;
@@ -267,7 +267,7 @@ public class ChangeMakerTestHarness {
       }
 
       System.out.println( "\n    Test" + makeTwoDigits() + ": testing optimal solution for 105 cents: " );
-      result = ChangeMaker.makeChangeWithDynamicProgramming( francDenominations, 105 );
+      result = DynamicChangeMaker.makeChangeWithDynamicProgramming( francDenominations, 105 );
       try {
         System.out.print( "      expecting Tuple: <1,0,0,2>: " );
         displaySuccessIfTrue( "<1,0,0,2>".equals( result.toString() ) ) ;
@@ -277,7 +277,7 @@ public class ChangeMakerTestHarness {
       }
 
       System.out.println( "\n    Test" + makeTwoDigits() + ": testing optimal solution for 135 cents: " );
-      result = ChangeMaker.makeChangeWithDynamicProgramming( francDenominations, 135 );
+      result = DynamicChangeMaker.makeChangeWithDynamicProgramming( francDenominations, 135 );
       try {
         System.out.print( "      expecting Tuple: <1,1,1,2>: " );
         displaySuccessIfTrue( "<1,1,1,2>".equals( result.toString() ) ) ;
@@ -339,7 +339,7 @@ public class ChangeMakerTestHarness {
       System.out.println( "          expecting: success: " );
       System.out.print  ( "            and got: " );
       try {
-         Tuple result = ChangeMaker.makeChangeWithDynamicProgramming( badDenominations, 2345 );
+         Tuple result = DynamicChangeMaker.makeChangeWithDynamicProgramming( badDenominations, 2345 );
       }
       catch( Exception e ) {
          displaySuccessIfTrue( false );
@@ -357,7 +357,7 @@ public class ChangeMakerTestHarness {
       System.out.println( "          expecting: success: " );
       System.out.print  ( "            and got: " );
       try {
-         Tuple result = ChangeMaker.makeChangeWithDynamicProgramming( badDenominations, 2345 );
+         Tuple result = DynamicChangeMaker.makeChangeWithDynamicProgramming( badDenominations, 2345 );
       }
       catch( Exception e ) {
          displaySuccessIfTrue( false );
@@ -375,7 +375,7 @@ public class ChangeMakerTestHarness {
       System.out.println( "          expecting: success: " );
       System.out.print  ( "            and got: " );
       try {
-         Tuple result = ChangeMaker.makeChangeWithDynamicProgramming( badDenominations, 2345 );
+         Tuple result = DynamicChangeMaker.makeChangeWithDynamicProgramming( badDenominations, 2345 );
       }
       catch( Exception e ) {
          displaySuccessIfTrue( false );
