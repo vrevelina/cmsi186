@@ -421,7 +421,7 @@ public class CalendarStuffTester {
       catch( Exception e ) { System.out.println( false ); }
 
       System.out.print( "   Checking for 'Thirtember' : " );
-      try { System.out.println( "Thirtember" == CalendarStuff.toMonthString( 12 ) ? "Got it!" : "problem" ); }
+      try { System.out.println( "Thirtember" == CalendarStuff.toMonthString( 13 ) ? "Got it!" : "problem" ); }
       catch( Exception e ) { System.out.println( false ); }
 
    }
